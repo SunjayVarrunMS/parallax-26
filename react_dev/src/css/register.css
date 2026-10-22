@@ -1,0 +1,219 @@
+.register-page {
+  padding-bottom: 80px;
+}
+.register-page__loading {
+  margin-top: 40px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+.register-page__loading::before {
+  content: '>> ';
+}
+.register-page__form {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  padding-top: 40px;
+}
+.register-page__fields {
+  display: grid;
+  gap: 22px;
+}
+.register-page .field select option {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+.register-page__team {
+  min-width: 0;
+  margin: 0;
+  padding: 0 18px 18px;
+  display: grid;
+  gap: 16px;
+  border: 2px solid var(--color-cyan);
+  background: var(--color-surface);
+}
+/* the teammate rows sit in the fieldset grid as if this box was not there */
+.register-page__team-list {
+  display: contents;
+}
+.register-page__team legend {
+  float: left;
+  width: calc(100% + 36px);
+  margin: 0 -18px 0;
+  padding: 4px 12px;
+  background: var(--color-cyan);
+  color: var(--color-on-cyan);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.register-page__team legend::before {
+  content: '>';
+}
+.register-page__teammate {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+}
+.register-page__team-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.register-page__note {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+}
+.register-page__note::before {
+  content: '// ';
+  color: var(--color-cyan);
+}
+.register-page__counter {
+  font: 700 0.72rem/1.5 var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--color-cyan);
+}
+.register-page__summary {
+  position: sticky;
+  top: 96px;
+  display: grid;
+  gap: 18px;
+  padding: 0 20px 20px;
+  border: 2px solid var(--color-cyan);
+  background: var(--color-surface);
+}
+.register-page__summary > .eyebrow {
+  margin-inline: -20px;
+  padding: 4px 12px;
+  background: var(--color-cyan);
+  color: var(--color-on-cyan);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.register-page__summary > .eyebrow::before,
+.register-page__done > .eyebrow::before {
+  content: '>';
+}
+.register-page__summary dl,
+.register-page__done dl {
+  margin: 0;
+}
+.register-page__summary dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 10px;
+  border-bottom: 1px dashed var(--color-line-soft);
+  font-size: 0.85rem;
+}
+.register-page__summary dt {
+  color: var(--color-muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+.register-page__summary dd,
+.register-page__done dd {
+  margin: 0;
+  font-weight: 800;
+}
+.register-page__summary .register-page__total {
+  border-bottom: 0;
+  align-items: baseline;
+}
+.register-page__summary .register-page__total dt {
+  color: var(--color-ink);
+  font-weight: 800;
+}
+.register-page__summary .register-page__total dd {
+  font: 900 1.7rem/1 var(--font-display);
+  color: var(--color-cyan);
+}
+.register-page__sum-line {
+  font-size: 0.72rem;
+  color: var(--color-green);
+}
+.register-page__sum-line::before {
+  content: '$ ';
+  color: var(--color-muted);
+}
+.register-page__summary .button {
+  width: 100%;
+}
+.register-page__done {
+  margin-top: 40px;
+  padding: 0 28px 28px;
+  border: 2px solid var(--color-green);
+  background: var(--color-surface);
+}
+.register-page__done > .eyebrow {
+  margin-inline: -28px;
+  padding: 4px 12px;
+  background: var(--color-green);
+  color: var(--color-on-cyan);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.register-page__done h2 {
+  margin-top: 24px;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 var(--color-teal);
+}
+.register-page__done dl {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 16px 48px;
+}
+.register-page__done dt {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+.register-page__done dd {
+  margin-top: 2px;
+  font-size: 1.05rem;
+  color: var(--color-green);
+  overflow-wrap: anywhere;
+}
+.register-page__done-actions {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 1000px) {
+  .register-page__form {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .register-page__summary {
+    position: static;
+  }
+}
+@media (max-width: 780px) {
+  .register-page__done {
+    padding: 0 18px 20px;
+  }
+  .register-page__done > .eyebrow {
+    margin-inline: -18px;
+  }
+  .register-page__done dl {
+    grid-template-columns: 1fr;
+  }
+  .register-page__done-actions .button {
+    white-space: normal;
+  }
+}

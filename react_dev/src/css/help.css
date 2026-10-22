@@ -1,0 +1,117 @@
+.help-page {
+  padding-bottom: 80px;
+}
+.help-page__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  padding-top: 40px;
+}
+.help-page__item {
+  border-bottom: 1px dashed var(--color-line-soft);
+}
+.help-page__item:last-child {
+  border-bottom: 0;
+}
+.help-page__item summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 12px 20px;
+  font-weight: 800;
+  color: #8ff3ff;
+  cursor: pointer;
+  list-style: none;
+}
+.help-page__item summary::-webkit-details-marker {
+  display: none;
+}
+.help-page__item summary::before {
+  content: '+';
+  flex-shrink: 0;
+  width: 1ch;
+  color: var(--color-accent);
+}
+.help-page__item[open] summary::before {
+  content: '-';
+}
+.help-page__item summary:hover {
+  color: var(--color-cyan);
+}
+.help-page__item p {
+  padding: 0 20px 18px 42px;
+  font-size: 0.88rem;
+  color: #d9f7ff;
+}
+.help-page__form,
+.help-page__done {
+  display: grid;
+  gap: 18px;
+  padding: 0 20px 20px;
+  border: 2px solid var(--color-cyan);
+  background: var(--color-surface);
+}
+.help-page__form > .eyebrow,
+.help-page__done > .eyebrow {
+  margin-inline: -20px;
+  padding: 4px 12px;
+  background: var(--color-cyan);
+  color: var(--color-on-cyan);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.help-page__form > .eyebrow::before,
+.help-page__done > .eyebrow::before {
+  content: '>';
+}
+.help-page__done {
+  border-color: var(--color-green);
+}
+.help-page__done > .eyebrow {
+  background: var(--color-green);
+}
+.help-page__done h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+.help-page__done .button {
+  justify-self: start;
+  white-space: normal;
+}
+.help-page .field select option {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+.help-page .field textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 11px 12px;
+  border: 2px solid var(--color-line-soft);
+  border-radius: 0;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  resize: vertical;
+}
+.help-page .field textarea::placeholder {
+  color: var(--color-muted);
+}
+.help-page .field textarea:hover,
+.help-page .field textarea:focus-visible {
+  border-color: var(--color-cyan);
+}
+.help-page .field textarea[aria-invalid='true'] {
+  border-color: var(--color-error);
+}
+.help-page__form .button {
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .help-page__layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
