@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a0b3d">
+    <meta name="description" content="PARALLAX '26. Three days of tech, culture and workshops on campus, 20-22 November. Same campus. New angle.">
+    <title>Workshops | PARALLAX</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Tektur:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/workshops.css">
+    <link rel="stylesheet" href="css/light.css">
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header id="site-header"></header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="container workshops-page">
+        <header class="page-heading">
+          <p class="eyebrow">&gt;&gt; PARALLAX / 05</p>
+          <h1>Give it a go<span class="cursor" aria-hidden="true"></span></h1>
+          <p class="page-heading__description">Be a beginner at something. It's a good look.</p>
+        </header>
+
+        <p class="workshops-page__loading" id="workshops-loading">Loading workshops...</p>
+        <p class="field__error" id="workshops-error" role="alert" hidden></p>
+        <ul class="workshops-page__grid" id="workshops-grid"></ul>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/workshops-api.js"></script>
+    <script src="js/workshops.js"></script>
+  </body>
+</html>

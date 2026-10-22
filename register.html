@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a0b3d">
+    <meta name="description" content="PARALLAX '26. Three days of tech, culture and workshops on campus, 20-22 November. Same campus. New angle.">
+    <title>Register | PARALLAX</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Tektur:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/light.css">
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header id="site-header"></header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="container register-page">
+        <header class="page-heading">
+          <p class="eyebrow">&gt;&gt; PARALLAX / 03</p>
+          <h1>Put your name down<span class="cursor" aria-hidden="true"></span></h1>
+          <p class="page-heading__description">Flying solo or bringing the whole team. There's room for your kind of energy.</p>
+        </header>
+
+        <section class="register-page__done" id="confirmation" aria-live="polite" hidden>
+          <p class="eyebrow">You're in</p>
+          <h2 id="confirmation-title">Registration confirmed</h2>
+          <dl>
+            <div>
+              <dt>Registration id</dt>
+              <dd id="confirmation-id"></dd>
+            </div>
+            <div>
+              <dt>Team size</dt>
+              <dd id="confirmation-team"></dd>
+            </div>
+            <div>
+              <dt>Total fee</dt>
+              <dd id="confirmation-fee"></dd>
+            </div>
+          </dl>
+          <div class="register-page__done-actions">
+            <a href="my-bookings.html" class="button button--primary">My bookings</a>
+            <button type="button" class="button button--outline" id="register-again">Register for another event</button>
+          </div>
+        </section>
+
+        <form class="register-page__form" id="register-form" novalidate>
+          <div class="register-page__fields">
+            <div class="field">
+              <label for="register-event">Event</label>
+              <select id="register-event">
+                <option value="">Choose an event</option>
+              </select>
+              <p id="register-event-error" class="field__error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="register-name">Full name</label>
+              <input id="register-name" autocomplete="name">
+              <p id="register-name-error" class="field__error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="register-email">Email</label>
+              <input id="register-email" type="email" autocomplete="email">
+              <p id="register-email-error" class="field__error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="register-phone">Phone</label>
+              <input id="register-phone" type="tel" inputmode="numeric" autocomplete="tel">
+              <p id="register-phone-error" class="field__error" hidden></p>
+            </div>
+
+            <fieldset class="register-page__team">
+              <legend>Teammates</legend>
+              <div class="register-page__team-list" id="teammate-list"></div>
+              <p id="teammates-error" class="field__error" hidden></p>
+              <div class="register-page__team-actions">
+                <button type="button" class="button button--outline" id="add-teammate" disabled>Add teammate</button>
+                <p class="register-page__note" id="team-note">Pick an event to see the team limit.</p>
+                <p class="register-page__counter" id="team-counter" role="status"></p>
+              </div>
+            </fieldset>
+          </div>
+
+          <aside class="register-page__summary" aria-label="Fee summary">
+            <p class="eyebrow">Fee summary</p>
+            <dl>
+              <div>
+                <dt>Fee per person</dt>
+                <dd id="summary-fee"></dd>
+              </div>
+              <div>
+                <dt>Team size</dt>
+                <dd id="summary-team"></dd>
+              </div>
+              <div class="register-page__total">
+                <dt>Total</dt>
+                <dd id="summary-total"></dd>
+              </div>
+            </dl>
+            <p class="register-page__sum-line" id="summary-line"></p>
+            <p class="field__error" id="submit-error" role="alert" hidden></p>
+            <button type="submit" class="button button--primary" id="submit-button">Register</button>
+          </aside>
+        </form>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/registrations-api.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>

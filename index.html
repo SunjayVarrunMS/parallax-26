@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a0b3d">
+    <meta name="description" content="PARALLAX '26. Three days of tech, culture and workshops on campus, 20-22 November. Same campus. New angle.">
+    <title>Home | PARALLAX</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Tektur:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/light.css">
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header id="site-header"></header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero__terminal panel">
+          <div class="panel__bar">
+            <span>&gt;TERMINAL</span>
+            <span>PLX://home</span>
+          </div>
+          <div class="hero__screen">
+            <ol class="hero__boot" aria-label="Festival details">
+                <li style="animation-delay: 0.0s">&gt;&gt; Initiating boot sequence...</li>
+                <li style="animation-delay: 0.35s">&gt;&gt; Loading modules: tech / culture / workshops ... [OK]</li>
+                <li style="animation-delay: 0.7s">&gt;&gt; Fest dates: 20-22 Nov</li>
+                <li style="animation-delay: 1.05s">&gt;&gt; Venue: on campus</li>
+                <li style="animation-delay: 1.4s">&gt;&gt; Registrations: [OPEN]</li>
+            </ol>
+            <h1 id="hero-title" class="hero__logo">
+              <span class="hero__logo-word">PARALLAX</span>
+              <span class="hero__logo-year">'26</span>
+            </h1>
+            <p class="hero__tagline">Same campus. New angle.<span class="cursor" aria-hidden="true"></span></p>
+            <p class="hero__copy">
+              Three days of hackathons, gigs, workshops and late nights. Same
+              campus you walk through every day, seen from somewhere else.
+            </p>
+            <div class="hero__actions">
+              <a href="register.html" class="button button--primary">Register</a>
+              <a href="events.html" class="button button--outline">Browse events</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__side">
+          <section class="panel" aria-labelledby="up-next-title">
+            <div class="panel__bar">
+              <span id="up-next-title">&gt;EVENTS</span>
+              <span id="event-total"></span>
+            </div>
+            <ul class="hero__events" id="up-next"></ul>
+            <a href="events.html" class="hero__side-link">&gt;&gt; All events</a>
+          </section>
+
+          <section class="panel" aria-labelledby="settings-title">
+            <div class="panel__bar">
+              <span id="settings-title">&gt;SETTINGS</span>
+            </div>
+            <dl class="hero__settings">
+              <div>
+                <dt>Mode:</dt>
+                <dd class="hero__settings-on">[ACTIVE]</dd>
+              </div>
+              <div>
+                <dt>Days:</dt>
+                <dd>
+                  <a href="schedule.html">[01]</a>
+                  <a href="schedule.html">[02]</a>
+                  <a href="schedule.html">[03]</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Access:</dt>
+                <dd>[OPEN TO ALL]</dd>
+              </div>
+            </dl>
+          </section>
+        </div>
+      </section>
+
+      <div class="festival-strip" aria-hidden="true">
+        <div>
+          <span>Tech <b>//</b></span>
+          <span>Culture <b>//</b></span>
+          <span>Workshops <b>//</b></span>
+          <span>20-22 Nov <b>//</b></span>
+          <span>Same campus. New angle. <b>//</b></span>
+          <span>Three days <b>//</b></span>
+          <span>Open to all <b>//</b></span>
+          <span>Tech <b>//</b></span>
+          <span>Culture <b>//</b></span>
+          <span>Workshops <b>//</b></span>
+          <span>20-22 Nov <b>//</b></span>
+          <span>Same campus. New angle. <b>//</b></span>
+          <span>Three days <b>//</b></span>
+          <span>Open to all <b>//</b></span>
+        </div>
+      </div>
+
+      <div class="container">
+        <section class="countdown panel" aria-label="Festival countdown">
+          <div class="panel__bar">
+            <span>&gt;COUNTDOWN</span>
+            <span id="countdown-state">[T-MINUS]</span>
+          </div>
+          <div class="countdown__inner">
+            <div class="countdown__intro">
+              <span class="status-dot"></span>
+              <p class="eyebrow" id="countdown-eyebrow">Time to day 01</p>
+            </div>
+            <div class="countdown__numbers" id="countdown-numbers">
+              <div><strong id="countdown-days">--</strong><span>Days</span></div>
+              <div><strong id="countdown-hours">--</strong><span>Hours</span></div>
+              <div><strong id="countdown-mins">--</strong><span>Mins</span></div>
+              <div><strong id="countdown-secs">--</strong><span>Secs</span></div>
+            </div>
+            <p class="countdown__note" id="countdown-note">20-22 November<span>Clear your calendar.</span></p>
+          </div>
+        </section>
+      </div>
+
+      <section class="first-look container" id="first-look" aria-labelledby="first-look-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">&gt;&gt; 01 / Featured</p>
+            <h2 id="first-look-title">Pick your angle.</h2>
+          </div>
+          <div class="section-heading__aside">
+            <p>
+              Build something, play something, make something. Or just watch
+              from the back row.
+            </p>
+            <a href="events.html" class="text-link">&gt;&gt; Explore events</a>
+          </div>
+        </div>
+        <p class="programme-note">
+          <span class="status-dot"></span> Sample programme. The final line-up is on its way.
+        </p>
+        <div class="event-grid" id="featured-events"></div>
+      </section>
+
+      <section class="campus-callout container" aria-labelledby="campus-title">
+        <div class="campus-callout__art panel" aria-hidden="true">
+          <div class="panel__bar">
+            <span>&gt;MAP</span>
+            <span>[GPS LOCK]</span>
+          </div>
+          <div class="campus-callout__map">
+            <span class="map-block map-block--one">STAGE</span>
+            <span class="map-block map-block--two">LAB</span>
+            <span class="map-block map-block--three">OAT</span>
+            <span class="map-pin">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <span class="map-label">YOU ARE HERE</span>
+            <span class="map-north">N ^</span>
+          </div>
+        </div>
+        <div class="campus-callout__copy">
+          <p class="eyebrow">&gt;&gt; 02 / Campus guide</p>
+          <h2 id="campus-title">Find your way around.</h2>
+          <p>
+            From the main stage to that workshop room on the far side of campus.
+            Look up your next stop before you head out.
+          </p>
+          <a href="campus-guide.html" class="button button--outline">Open the campus guide</a>
+        </div>
+      </section>
+
+      <section class="closing-note container panel" aria-labelledby="help-title">
+        <div class="panel__bar">
+          <span>&gt;HELP</span>
+          <span>[ONLINE]</span>
+        </div>
+        <div class="closing-note__body">
+          <div>
+            <p class="eyebrow">Got a question? Lost a friend?</p>
+            <h2 id="help-title">The help desk is listening.</h2>
+          </div>
+          <a href="help.html" class="button button--ink">Ping the help desk</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

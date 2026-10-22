@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a0b3d">
+    <meta name="description" content="PARALLAX '26. Three days of tech, culture and workshops on campus, 20-22 November. Same campus. New angle.">
+    <title>Cart | PARALLAX</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Tektur:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/light.css">
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header id="site-header"></header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="container cart-page">
+        <header class="page-heading">
+          <p class="eyebrow">&gt;&gt; PARALLAX / 11</p>
+          <h1>Your cart<span class="cursor" aria-hidden="true"></span></h1>
+          <p class="page-heading__description">Everything you're about to buy, in one place.</p>
+        </header>
+
+        <p class="cart-page__loading" id="cart-loading">Loading your cart...</p>
+
+        <section class="empty-state" id="cart-empty" hidden>
+          <div class="panel__bar" aria-hidden="true">
+            <span>&gt;CART</span>
+            <span>[EMPTY]</span>
+          </div>
+          <div class="empty-state__body">
+            <span class="empty-state__mark" aria-hidden="true">&gt;_</span>
+            <div>
+              <h2>Your cart is empty.</h2>
+              <p>Items you add from the shop will show up here.</p>
+            </div>
+            <a href="merch.html" class="button button--primary">Go to merch</a>
+          </div>
+        </section>
+
+        <div class="cart-page__layout" id="cart-content" hidden>
+          <section class="panel" aria-label="Cart items">
+            <div class="panel__bar">
+              <span>&gt;CART</span>
+              <span id="cart-bar-count"></span>
+            </div>
+            <ul class="cart-page__lines" id="cart-lines"></ul>
+          </section>
+
+          <form class="cart-page__summary" id="checkout-form" novalidate>
+            <p class="eyebrow">Checkout</p>
+            <dl>
+              <div>
+                <dt>Items</dt>
+                <dd id="cart-items">Items: 0</dd>
+              </div>
+              <div class="cart-page__total">
+                <dt>Total</dt>
+                <dd id="cart-total"></dd>
+              </div>
+            </dl>
+            <div class="field">
+              <label for="checkout-name">Full name</label>
+              <input id="checkout-name" autocomplete="name">
+              <p id="checkout-name-error" class="field__error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="checkout-email">Email</label>
+              <input id="checkout-email" type="email" autocomplete="email">
+              <p id="checkout-email-error" class="field__error" hidden></p>
+            </div>
+            <p class="field__error" id="checkout-error" role="alert" hidden></p>
+            <button type="submit" class="button button--primary" id="checkout-button">Place order</button>
+          </form>
+        </div>
+
+        <section class="cart-page__done" id="cart-done" aria-live="polite" hidden>
+          <p class="eyebrow">Order placed</p>
+          <h2>Thanks for your order</h2>
+          <dl>
+            <div>
+              <dt>Order id</dt>
+              <dd id="done-id"></dd>
+            </div>
+            <div>
+              <dt>Total</dt>
+              <dd id="done-total"></dd>
+            </div>
+          </dl>
+          <div class="cart-page__done-actions">
+            <a href="my-bookings.html" class="button button--primary">My bookings</a>
+            <a href="merch.html" class="button button--outline">Keep shopping</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/shop-api.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

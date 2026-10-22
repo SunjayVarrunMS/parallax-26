@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a0b3d">
+    <meta name="description" content="PARALLAX '26. Three days of tech, culture and workshops on campus, 20-22 November. Same campus. New angle.">
+    <title>My bookings | PARALLAX</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Tektur:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/my-bookings.css">
+    <link rel="stylesheet" href="css/light.css">
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header id="site-header"></header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="container my-bookings-page">
+        <header class="page-heading">
+          <p class="eyebrow">&gt;&gt; PARALLAX / 04</p>
+          <h1>Your festival<span class="cursor" aria-hidden="true"></span></h1>
+          <p class="page-heading__description">All the things you've said yes to, in one place.</p>
+        </header>
+
+        <p class="my-bookings-page__loading" id="bookings-loading">Loading your bookings...</p>
+        <p class="field__error" id="bookings-error" role="alert" hidden></p>
+        <div class="my-bookings-page__sections" id="bookings-sections" hidden>
+          <section class="panel" aria-labelledby="registrations-title">
+            <div class="panel__bar">
+              <span id="registrations-title">&gt;EVENT REGISTRATIONS</span>
+              <span id="registrations-count"></span>
+            </div>
+            <ul class="my-bookings-page__list" id="registrations-list"></ul>
+          </section>
+
+          <section class="panel" aria-labelledby="workshops-title">
+            <div class="panel__bar">
+              <span id="workshops-title">&gt;WORKSHOP BOOKINGS</span>
+              <span id="workshops-count"></span>
+            </div>
+            <ul class="my-bookings-page__list" id="workshops-list"></ul>
+          </section>
+
+          <section class="panel" aria-labelledby="orders-title">
+            <div class="panel__bar">
+              <span id="orders-title">&gt;MERCH ORDERS</span>
+              <span id="orders-count"></span>
+            </div>
+            <ul class="my-bookings-page__list" id="orders-list"></ul>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/registrations-api.js"></script>
+    <script src="js/shop-api.js"></script>
+    <script src="js/workshops-api.js"></script>
+    <script src="js/my-bookings.js"></script>
+  </body>
+</html>

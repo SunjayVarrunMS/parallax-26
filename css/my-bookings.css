@@ -1,0 +1,100 @@
+.my-bookings-page {
+  padding-bottom: 80px;
+}
+.my-bookings-page__loading {
+  margin-top: 40px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+.my-bookings-page__loading::before {
+  content: '>> ';
+}
+.my-bookings-page .field__error {
+  margin-top: 32px;
+}
+.my-bookings-page__sections {
+  display: grid;
+  gap: 28px;
+  padding-top: 40px;
+}
+.my-bookings-page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.my-bookings-page__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 12px 24px;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px dashed var(--color-line-soft);
+}
+.my-bookings-page__row:last-child {
+  border-bottom: 0;
+}
+.my-bookings-page__what h3 {
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+.my-bookings-page__what p {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  overflow-wrap: anywhere;
+}
+.my-bookings-page__what .my-bookings-page__date {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+}
+.my-bookings-page__actions {
+  min-width: 92px;
+  display: flex;
+  justify-content: flex-end;
+}
+.my-bookings-page__actions .button {
+  min-height: 40px;
+  padding: 8px 14px;
+}
+.my-bookings-page__confirm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.my-bookings-page__ask {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.my-bookings-page__empty {
+  padding: 20px;
+}
+.my-bookings-page__empty p {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+.my-bookings-page__empty p::before {
+  content: '// ';
+  color: var(--color-cyan);
+}
+@media (max-width: 640px) {
+  .my-bookings-page__row {
+    grid-template-columns: 1fr auto;
+  }
+  .my-bookings-page__what {
+    grid-column: 1 / -1;
+  }
+  .my-bookings-page__actions {
+    justify-content: flex-end;
+  }
+  .my-bookings-page__confirm {
+    justify-content: flex-start;
+  }
+}

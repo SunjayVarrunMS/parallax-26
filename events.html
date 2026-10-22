@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a0b3d">
+    <meta name="description" content="PARALLAX '26. Three days of tech, culture and workshops on campus, 20-22 November. Same campus. New angle.">
+    <title>Events | PARALLAX</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Tektur:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/light.css">
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header id="site-header"></header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="container events-page">
+        <header class="page-heading">
+          <p class="eyebrow">&gt;&gt; PARALLAX / 01</p>
+          <h1>Find your thing<span class="cursor" aria-hidden="true"></span></h1>
+          <p class="page-heading__description">On stage, behind a screen, or somewhere completely unexpected.</p>
+        </header>
+
+        <section class="events-page__promo">
+          <h2>
+            🚀 Unlock Your Potential at PARALLAX 2026! ✨ Discover amazing events,
+            connect with like-minded individuals, and elevate your festival
+            experience to the next level! 🎉
+          </h2>
+          <button type="button" class="events-page__promo-button">Explore Now 🔥</button>
+        </section>
+
+        <section class="events-page__filters" aria-label="Filter events">
+          <div class="events-page__search">
+            <label for="event-search">Search events</label>
+            <input id="event-search" type="search" placeholder="Try 'Robo' or 'Stage'">
+          </div>
+          <div class="events-page__group">
+            <p class="eyebrow" id="category-label">Category</p>
+            <div role="group" aria-labelledby="category-label">
+              <button type="button" class="events-page__chip" data-category="All" aria-pressed="true">All</button>
+              <button type="button" class="events-page__chip" data-category="Culture" aria-pressed="false">Culture</button>
+              <button type="button" class="events-page__chip" data-category="Tech" aria-pressed="false">Tech</button>
+            </div>
+          </div>
+          <div class="events-page__group">
+            <p class="eyebrow" id="day-label">Day</p>
+            <div role="group" aria-labelledby="day-label">
+              <button type="button" class="events-page__chip" data-day="All" aria-pressed="true">All</button>
+              <button type="button" class="events-page__chip" data-day="1" aria-pressed="false">Day 1</button>
+              <button type="button" class="events-page__chip" data-day="2" aria-pressed="false">Day 2</button>
+              <button type="button" class="events-page__chip" data-day="3" aria-pressed="false">Day 3</button>
+            </div>
+          </div>
+        </section>
+
+        <p class="events-page__count" id="events-count" role="status"></p>
+
+        <section class="events-page__empty" id="events-empty" hidden>
+          <h2>Nothing matches that.</h2>
+          <p>Try a different word, or let the filters go.</p>
+          <button type="button" class="button button--outline" id="clear-filters">Clear filters</button>
+        </section>
+
+        <ul class="events-page__grid" id="events-grid"></ul>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/events.js"></script>
+  </body>
+</html>

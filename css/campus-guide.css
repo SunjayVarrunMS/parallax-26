@@ -1,0 +1,102 @@
+.campus-guide-page {
+  padding-bottom: 80px;
+}
+.campus-guide-page__loading {
+  margin-top: 40px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+.campus-guide-page__loading::before {
+  content: '>> ';
+}
+.campus-guide-page__grid {
+  list-style: none;
+  margin: 0;
+  padding: 40px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.campus-guide-page__card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 18px;
+  border: 2px solid var(--color-cyan);
+  background: var(--color-surface);
+}
+.campus-guide-page__bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-inline: -20px;
+  padding: 4px 12px;
+  background: var(--color-cyan);
+  color: var(--color-on-cyan);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+.campus-guide-page__card h2 {
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.campus-guide-page__description {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+.campus-guide-page__card h3 {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--color-line-soft);
+}
+.campus-guide-page__card h3::before {
+  content: '>> ';
+}
+.campus-guide-page__held {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.campus-guide-page__held li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.campus-guide-page__day {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  line-height: 1.7;
+  color: var(--color-accent);
+}
+.campus-guide-page__none {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+.campus-guide-page__card .text-link {
+  margin-top: auto;
+  align-self: flex-start;
+  padding-top: 20px;
+}
+@media (max-width: 1000px) {
+  .campus-guide-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+@media (max-width: 780px) {
+  .campus-guide-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

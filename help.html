@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a0b3d">
+    <meta name="description" content="PARALLAX '26. Three days of tech, culture and workshops on campus, 20-22 November. Same campus. New angle.">
+    <title>Help desk | PARALLAX</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Tektur:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/help.css">
+    <link rel="stylesheet" href="css/light.css">
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header id="site-header"></header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="container help-page">
+        <header class="page-heading">
+          <p class="eyebrow">&gt;&gt; PARALLAX / 08</p>
+          <h1>We're around<span class="cursor" aria-hidden="true"></span></h1>
+          <p class="page-heading__description">Small questions. Big questions. "Where did I leave my bag?" questions.</p>
+        </header>
+
+        <div class="help-page__layout">
+          <section class="panel" aria-labelledby="faq-title">
+            <div class="panel__bar">
+              <span id="faq-title">&gt;FAQ</span>
+              <span>[6 ANSWERS]</span>
+            </div>
+            <div class="help-page__faq">
+              <details class="help-page__item">
+                <summary>When and where is PARALLAX '26?</summary>
+                <p>It runs from 20 to 22 November, on campus. Every venue, with directions, is on the campus guide page.</p>
+              </details>
+              <details class="help-page__item">
+                <summary>Do I need a ticket to come in?</summary>
+                <p>Walking around is free with a college ID. Some events have a fee, shown on the events page and in the fee summary when you register.</p>
+              </details>
+              <details class="help-page__item">
+                <summary>How do I know my registration worked?</summary>
+                <p>You get a confirmation panel straight after you register. Every registration, workshop booking and merch order also shows up on My bookings.</p>
+              </details>
+              <details class="help-page__item">
+                <summary>Can I get a refund?</summary>
+                <p>Cancel from My bookings and the fee is returned within five working days. If we cancel an event, everyone gets a full refund without asking.</p>
+              </details>
+              <details class="help-page__item">
+                <summary>Where do I pick up my merch?</summary>
+                <p>Collect it from the merch desk next to the food court. Bring a college ID and the order id from My bookings.</p>
+              </details>
+              <details class="help-page__item">
+                <summary>I lost something. What now?</summary>
+                <p>Lost and found is at the help desk by the main stage. Describe the item in the form below and we will check the box for you.</p>
+              </details>
+            </div>
+          </section>
+
+          <div>
+            <section class="help-page__done" id="help-done" aria-live="polite" hidden>
+              <p class="eyebrow">Message sent</p>
+              <h2 id="help-done-text"></h2>
+              <button type="button" class="button button--outline" id="help-again">Send another message</button>
+            </section>
+
+            <form class="help-page__form" id="help-form" novalidate>
+              <p class="eyebrow">Contact the desk</p>
+              <div class="field">
+                <label for="help-name">Full name</label>
+                <input id="help-name" autocomplete="name">
+                <p id="help-name-error" class="field__error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="help-email">Email</label>
+                <input id="help-email" type="email" autocomplete="email">
+                <p id="help-email-error" class="field__error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="help-topic">Topic</label>
+                <select id="help-topic">
+                  <option>Tickets and registration</option>
+                  <option>Workshops</option>
+                  <option>Refunds</option>
+                  <option>Merch</option>
+                  <option>Lost and found</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="help-message">Message</label>
+                <textarea id="help-message" rows="5" placeholder="Where's my ticket?"></textarea>
+                <p id="help-message-error" class="field__error" hidden></p>
+              </div>
+              <p class="field__error" id="help-error" role="alert" hidden></p>
+              <button type="submit" class="button button--primary" id="help-button">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/help-api.js"></script>
+    <script src="js/help.js"></script>
+  </body>
+</html>
